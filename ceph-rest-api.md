@@ -8,9 +8,9 @@
 
 - Lệnh trên sẽ khởi chạy rest api với:
 
- - Sử dụng các cấu hình được khai báo trong /etc/ceph/ceph.conf
- - Quyền cluster admin
- - Khởi chạy cho cluster 'ceph'
+  - Sử dụng các cấu hình được khai báo trong /etc/ceph/ceph.conf
+  - Quyền cluster admin
+  - Khởi chạy cho cluster 'ceph'
 
 - Tạo service /etc/init.d/ceph-rest-api để khởi chạy tự động
 
