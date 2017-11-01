@@ -7,6 +7,7 @@
 ```
 
 Lệnh trên sẽ khởi chạy rest api với:
+
 	- Sử dụng các cấu hình được khai báo trong /etc/ceph/ceph.conf
 	- Quyền cluster admin
 	- Khởi chạy cho cluster 'ceph'
@@ -53,5 +54,7 @@ update-rc.d ceph-rest-api defaults
 ```
 
 Tham khảo:
-http://ceph.com/geen-categorie/experimenting-with-the-ceph-rest-api/
-https://dmsimard.com/2014/01/01/documentation-for-ceph-rest-api/
+
+[1]- http://ceph.com/geen-categorie/experimenting-with-the-ceph-rest-api/
+
+[2]- https://dmsimard.com/2014/01/01/documentation-for-ceph-rest-api/
