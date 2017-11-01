@@ -53,6 +53,16 @@ exit 0
 update-rc.d ceph-rest-api defaults
 ```
 
+- Kiểm tra hoạt động của rest api sau khi chạy (mặc định sử dụng port 5000)
+```sh
+# netstat -anp | grep 5000
+```
+
+Kết quả:
+```sh
+tcp        0      0 0.0.0.0:5000            0.0.0.0:*               LISTEN      2638/python
+```
+
 Tham khảo:
 
 [1]- http://ceph.com/geen-categorie/experimenting-with-the-ceph-rest-api/
