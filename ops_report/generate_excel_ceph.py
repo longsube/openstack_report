@@ -43,12 +43,16 @@ def write_xls(file_name, data):
         sheet.write_number(row, 1, params.get('used_gb'))
         sheet.write_number(row, 2, params.get('total_gb'))
         if params.get('total_gb') != 0:
+      #      ratio_storage_theory = (float(params.get('used_gb')) / float(params.get('total_gb'))) * 100
+       #     sheet.write_formula(row, 3, ratio_storage_theory)
             sheet.write_formula(row, 3, '=(B{0}/C{0})*100'.format(row+1))
         else:
             sheet.write_formula(row, 3, '0')
         sheet.write_number(row, 4, params.get('real_used_gb'))
         sheet.write_number(row, 5, params.get('real_total_gb'))
         if params.get('real_total_gb') != 0:
+           # ratio_storage_real = (float(params.get('real_used_gb')) / float(params.get('real_total_gb'))) * 100
+           # sheet.write_formula(row, 3, ratio_storage_real)
             sheet.write_formula(row, 6, '=(E{0}/F{0})*100'.format(row+1))
         else:
             sheet.write_formula(row, 6, '0')

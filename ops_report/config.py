@@ -1,6 +1,7 @@
 # For OpenStack
 user_admin = 'admin'
-pass_admin = 'xxxxxx'keystone_ip = '172.16.69.50'
+pass_admin = 'xxxxxx'
+keystone_ip = '172.16.69.50'
 nova_ip = '172.16.69.50'
 nova_port = '8774'
 ratio_ram = '1.5'
