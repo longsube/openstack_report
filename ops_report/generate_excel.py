@@ -46,25 +46,25 @@ def write_xls(file_name, data):
         sheet.write_number(row, 1, params.get('memory_mb_used'))
         sheet.write_number(row, 2, params.get('memory_mb'))
         if params.get('memory_mb') != 0:
-          #  ratio_ram_theory = (float(params.get('memory_mb_used'))/float(params.get('memory_mb')))*100
-            sheet.write_formula(row, 3, '=(B{0}/C{0})*100'.format(row+1))
-         #   sheet.write_formula(row, 3, ratio_ram_theory)
+            ratio_ram_theory = (float(params.get('memory_mb_used'))/float(params.get('memory_mb')))*100
+           # sheet.write_formula(row, 3, '=(B{0}/C{0})*100'.format(row+1))
+            sheet.write_number(row, 3, ratio_ram_theory)
         else:
             sheet.write_formula(row, 3, '0')
         sheet.write_number(row, 4, params.get('real_memory_used'))
         sheet.write_number(row, 5, params.get('real_memory_mb'))
         if params.get('real_memory_mb') != 0:
-         #   ratio_ram_real = (float(params.get('real_memory_used')) / float(params.get('real_memory_mb'))) * 100
-         #   sheet.write_formula(row, 6, ratio_ram_real)
-            sheet.write_formula(row, 6, '=(E{0}/F{0})*100'.format(row+1))
+            ratio_ram_real = (float(params.get('real_memory_used')) / float(params.get('real_memory_mb'))) * 100
+            sheet.write_number(row, 6, ratio_ram_real)
+         #   sheet.write_formula(row, 6, '=(E{0}/F{0})*100'.format(row+1))
         else:
             sheet.write_formula(row, 6, '0')
         sheet.write_number(row, 7, params.get('vcpus_used'))
         sheet.write_number(row, 8, params.get('vcpus'))
         if params.get('vcpus') != 0:
-          #  ratio_cpu_theory = (float(params.get('vcpus_used')) / float(params.get('vcpus'))) * 100
-          #  sheet.write_formula(row, 9, ratio_cpu_theory))
-            sheet.write_formula(row, 9, '=(H{0}/I{0})*100'.format(row+1))
+            ratio_cpu_theory = (float(params.get('vcpus_used')) / float(params.get('vcpus'))) * 100
+            sheet.write_number(row, 9, ratio_cpu_theory)
+          #  sheet.write_formula(row, 9, '=(H{0}/I{0})*100'.format(row+1))
         else:
             sheet.write_formula(row, 9, '0')
         sheet.write_number(row, 10, params.get('percent_cpu'))
