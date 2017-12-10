@@ -29,9 +29,11 @@ email_to = 'xxxx@gmail.com; yyy@email.com'
 email_server = 'xxxxx:port'
 
 # Mapping Nova with Zabbix
-
 mapping = {
     'compute1.hn.vnpt': 'com1_hn',
     'compute2.hn.vnpt': 'com2_hn',
-    'ceph_hdd': 'volumes-hdd',
 }
+
+# Mapping Ceph with Zabbix
+mapping_ceph = {
+    'ceph_hdd': 'volumes-hdd',

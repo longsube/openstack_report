@@ -99,7 +99,7 @@ def main():
     # Step 7:
     for pool_ceph, params in ceph_pool_list.items():
         try:
-            pool_ops = list(config.mapping.keys())[list(config.mapping.values()).index(pool_ceph)]
+            pool_ops = list(config.mapping_ceph.keys())[list(config.mapping_ceph.values()).index(pool_ceph)]
             theory_params = cinder_pools_list[pool_ops]
             ceph_pool_list[pool_ceph].update(theory_params)
         except Exception as e:
