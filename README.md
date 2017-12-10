@@ -4,8 +4,12 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - CPU và RAM thực tế đã cung cấp trên các host compute: sử dụng Zabbix api (host compute đã cài đặt Zabbix agent và giám sát tập trung tại Zabbix Server)
  - Storage dành cho volume lý thuyết: sử dụng cinder-api (chưa lấy storage cho backup và image)
  - Storage dành cho volume thực tế: sử dụng ceph-api(tham khảo hướng dẫn cấu hình ở ![đây](ceph-rest-api.md))
+ - Phiên bản OpenStack tương thích: Mitaka
+ - Phiên bản Ceph tương thích: Jewel
+ - Phiên bản Zabbix tương thích: 3.0
 
 Script này chạy trên 1 máy Client, có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
+
 
 # Hướng dẫn sử dụng
 ## 1. Sau khi download source code về, bắt đầu tiến hành cài đăt các package cần thiết
