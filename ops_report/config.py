@@ -34,6 +34,6 @@ mapping = {
     'compute2.hn.vnpt': 'com2_hn',
 }
 
-# Mapping Ceph with Zabbix
+# Mapping storage pool between OpenStack and Ceph
 mapping_ceph = {
     'ceph_hdd': 'volumes-hdd',
