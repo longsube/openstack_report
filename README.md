@@ -5,8 +5,18 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - Storage dành cho volume lý thuyết: sử dụng cinder-api (chưa lấy storage cho backup và image)
  - Storage dành cho volume thực tế: sử dụng ceph-api(tham khảo hướng dẫn cấu hình ở ![đây](ceph-rest-api.md))
 
+Script này chạy trên 1 máy Client, có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
+
 # Hướng dẫn sử dụng
-## 1. Thay đổi các thông số cấu hình trong /ops_report/config.py
+## 1. Sau khi download source code về, bắt đầu tiến hành cài đăt các package cần thiết
+
+```sh
+cd openstack_report
+pip install -r requirements.txt 
+```
+
+
+## 2. Thay đổi các thông số cấu hình trong /ops_report/config.py
 ```sh
 # For OpenStack (khai báo các thông số cấu hình để kết nối tới OpenStack)
 user_admin = 'admin'
@@ -53,3 +63,15 @@ mapping_ceph = {
 ```sh
 python run.py
 ```
+
+
+## 4. Mail báo cáo được gửi về mail, có dạng như sau:
+
+![mail_1](images/mail_1.jpg)
+
+![mail_2](images/mail_2.jpg)
+
+![mail_3](images/mail_3.jpg)
+
+
+
