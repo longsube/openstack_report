@@ -8,7 +8,7 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - Phiên bản Ceph tương thích: Jewel
  - Phiên bản Zabbix tương thích: 3.0
 
-Script này chạy trên 1 máy Client, có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
+Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
 
 
 # Hướng dẫn sử dụng
@@ -16,11 +16,11 @@ Script này chạy trên 1 máy Client, có khả năng kết nối tới các A
 
 ```sh
 cd openstack_report
-pip install -r requirements.txt 
+pip install -r /root/openstack_report/requirements.txt 
 ```
 
 
-## 2. Thay đổi các thông số cấu hình trong /ops_report/config.py
+## 2. Thay đổi các thông số cấu hình trong /root/openstack_report//ops_report/config.py
 ```sh
 # For OpenStack (khai báo các thông số cấu hình để kết nối tới OpenStack)
 user_admin = 'admin'
@@ -65,7 +65,7 @@ mapping_ceph = {
 ```
 ## 3. Chạy script
 ```sh
-python run.py
+python /root/openstack_report/run.py
 ```
 
 
