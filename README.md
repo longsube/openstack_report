@@ -46,7 +46,7 @@ zabbix_port = '80'
 ceph_ip = '172.16.69.167'
 ceph_port = '5000'
 
-# For sending emails (khai báo mail sử dụng để gửi và nhận các báo cáo thống kế)
+# For sending emails (khai báo mail sử dụng để gửi và nhận các báo cáo thống kê, ngăn cách bằng dấu ;)
 email_from = 'abc@email.com'
 pass_email_from = 'xxx'
 email_to = 'xxxx@gmail.com; yyy@email.com'
