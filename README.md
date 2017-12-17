@@ -7,6 +7,7 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - Phiên bản OpenStack tương thích: Mitaka
  - Phiên bản Ceph tương thích: Jewel
  - Phiên bản Zabbix tương thích: 3.0
+ - Phiên bản Python: 2.7.5 hoặc 3.5.6
 
 Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
 
