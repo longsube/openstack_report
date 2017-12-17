@@ -20,7 +20,6 @@ cd openstack_report
 pip install -r /root/openstack_report/requirements.txt 
 ```
 
-
 ## 2. Thay đổi các thông số cấu hình trong /root/openstack_report//ops_report/config.py
 ```sh
 # For OpenStack (khai báo các thông số cấu hình để kết nối tới OpenStack)
@@ -77,6 +76,13 @@ python /root/openstack_report/run.py
 ![mail_2](images/mail_2.jpg)
 
 ![mail_3](images/mail_3.jpg)
+
+## Cài đặt Python 3.5.6 (optional)
+```sh
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt-get update
+sudo apt-get install python3.6
+```
 
 
 

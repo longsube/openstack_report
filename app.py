@@ -10,8 +10,8 @@ api = Api(app)
 
 api.add_resource(Compute, '/compute')
 api.add_resource(ComputeReport, '/compute/report')
-api.add_resource(Storage, '/storage')
-api.add_resource(StorageReport, '/storage/report')
+#api.add_resource(Storage, '/storage')
+#api.add_resource(StorageReport, '/storage/report')
 
 # api.add_resource(Storage, '/storage')
 
