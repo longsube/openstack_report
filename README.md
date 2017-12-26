@@ -86,7 +86,7 @@ Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết n�
   	source venv/bin/activate
   	```
 
-  - Cài đặt python3.5 dev
+  - Cài đặt python3.6 dev
   	```sh
   	apt-get install python3.6-dev -y
   	```
