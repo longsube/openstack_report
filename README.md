@@ -206,7 +206,7 @@ Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết n�
 	```
   - Kết quả nhận được một dict dữ liệu rỗng:
 	```sh
-	{}
+	{"compute2.hn.vnpt": {"memory_mb_used": 1024, "memory_mb": 5928.0, "vcpus_used": 1, "vcpus": 6.0, "real_memory_used": 3077.30078125, "percent_cpu": 2.1479, "real_memory_mb": 3952.359375}, "compute1.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 3269.98046875, "percent_cpu": 1.3246, "real_memory_mb": 3952.359375}, "compute3.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}, "compute4.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}, "localhost.localdomain": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}}
 	```
 
 ## 5. Mail báo cáo được gửi về mail, có dạng như sau:
