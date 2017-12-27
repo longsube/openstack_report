@@ -7,20 +7,35 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - Phiên bản OpenStack tương thích: Mitaka
  - Phiên bản Ceph tương thích: Jewel
  - Phiên bản Zabbix tương thích: 3.0
+ - Phiên bản Python: 2.7
 
-Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
+Script này chạy trên 1 máy Client (172.16.69.160), có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
 
 
 # Hướng dẫn sử dụng
-## 1. Sau khi download source code về, bắt đầu tiến hành cài đăt các package cần thiết
+
+## 1. Tải chương trình
+  - Cài đặt git
+  ```sh
+	apt-get update
+	apt-get install git -y
+	```
+
+  - Clone chương trình
+	```sh
+	git clone -b longlq https://github.com/longsube/openstack_report.git
+	```
+
+## 2. Sau khi download source code về, bắt đầu tiến hành cài đăt các package cần thiết
 
 ```sh
-cd openstack_report
+cd /root/openstack_report
+apt-get install python-dev -y
 pip install -r /root/openstack_report/requirements.txt 
 ```
 
 
-## 2. Thay đổi các thông số cấu hình trong /root/openstack_report//ops_report/config.py
+## 3. Thay đổi các thông số cấu hình trong /root/openstack_report/ops_report/config.py
 ```sh
 # For OpenStack (khai báo các thông số cấu hình để kết nối tới OpenStack)
 user_admin = 'admin'
@@ -63,13 +78,13 @@ mapping_ceph = {
     'ceph_hdd': 'volumes-hdd',
 }
 ```
-## 3. Chạy script
+## 4. Chạy script
 ```sh
 python /root/openstack_report/run.py
 ```
 
 
-## 4. Mail báo cáo được gửi về mail, có dạng như sau:
+## 5. Mail báo cáo được gửi về mail, có dạng như sau:
 
 ![mail_1](images/mail_1.jpg)
 
