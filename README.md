@@ -1,5 +1,5 @@
 # openstack_report
-Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý thuyết và thực tế:
+Chương trình xuất báo cáo về tình trạng sử dụng tài nguyên trên lý thuyết và thực tế:
  - CPU và RAM lý thuyết đã cung cấp trên hệ thống OpenStack: sử dụng nova api.
  - CPU và RAM thực tế đã cung cấp trên các host compute: sử dụng Zabbix api (host compute đã cài đặt Zabbix agent và giám sát tập trung tại Zabbix Server)
  - Storage dành cho volume lý thuyết: sử dụng cinder-api (chưa lấy storage cho backup và image)
@@ -7,9 +7,9 @@ Script xuất báo cáo về tình trạng sử dụng tài nguyên trên lý th
  - Phiên bản OpenStack tương thích: Mitaka
  - Phiên bản Ceph tương thích: Jewel
  - Phiên bản Zabbix tương thích: 3.0
- - Phiên bản Python: 2.7.5 hoặc 3.5.6
+ - Phiên bản Python: 3.6
 
-Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết nối tới các API của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo.
+Cài đặt chương trình này trên 1 máy Client (172.16.69.160), có khả năng kết nối tới các dải mạng của OpenStack, Zabbix Server, Ceph để thu thập các thông tin báo cáo qua API.
 
 
 # Hướng dẫn sử dụng
@@ -208,6 +208,9 @@ Script này chạy trên 1 máy Client (172.16.69.81), có khả năng kết n�
 	```sh
 	{"compute2.hn.vnpt": {"memory_mb_used": 1024, "memory_mb": 5928.0, "vcpus_used": 1, "vcpus": 6.0, "real_memory_used": 3077.30078125, "percent_cpu": 2.1479, "real_memory_mb": 3952.359375}, "compute1.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 3269.98046875, "percent_cpu": 1.3246, "real_memory_mb": 3952.359375}, "compute3.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}, "compute4.hn.vnpt": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}, "localhost.localdomain": {"memory_mb_used": 512, "memory_mb": 5928.0, "vcpus_used": 0, "vcpus": 6.0, "real_memory_used": 0, "real_memory_mb": 0, "percent_cpu": 0}}
 	```
+  - Sử dụng Chrome, truy cập vào địa chỉ http://172.16.69.160/compute
+  ![img](images/4.jpg)
+
 
 ## 5. Mail báo cáo được gửi về mail, có dạng như sau:
 
