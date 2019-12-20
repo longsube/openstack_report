@@ -3,7 +3,7 @@
 
 - Lệnh để khởi chạy ceph-rest-api
 ```sh
-#ceph-rest-api -c /etc/ceph/ceph.conf --cluster ceph -n client.admin
+ceph-rest-api -c /etc/ceph/ceph.conf --cluster ceph -n client.admin
 ```
 
 - Lệnh trên sẽ khởi chạy rest api với:
@@ -12,7 +12,12 @@
   - Quyền cluster admin
   - Khởi chạy cho cluster 'ceph'
 
-- Tạo service /etc/init.d/ceph-rest-api để khởi chạy tự động
+- Tạo service `/etc/init.d/ceph-rest-api` để khởi chạy tự động
+```
+vim /etc/init.d/ceph-rest-api
+```
+
+Nội dung file `/etc/init.d/ceph-rest-api`
 
 ```sh
 #! /bin/sh
@@ -43,6 +48,11 @@ esac
 exit 0
 ```
 
+- Thêm quyền thực thi service
+```
+chmod +x /etc/init.d/ceph-rest-api
+```
+
 - Khởi chạy service
 ```sh
 /etc/init.d/ceph-rest-api start
@@ -55,7 +65,7 @@ update-rc.d ceph-rest-api defaults
 
 - Kiểm tra hoạt động của rest api sau khi chạy (mặc định sử dụng port 5000)
 ```sh
-# netstat -anp | grep 5000
+netstat -anp | grep 5000
 ```
 
 Kết quả:
